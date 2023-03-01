@@ -1,0 +1,29 @@
+package Training;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class DemoCheckbox {
+
+	
+	
+	
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+	//	System.setProperty("webdriver.chrome.driver", "./Drivers//chromedriver.exe");
+		ChromeDriver driver = new ChromeDriver();
+		driver.get("file:///C:/Users/USER/Downloads/demo%20(1).html");
+		driver.manage().window().maximize();
+		List<WebElement> checkbox=driver.findElements(By.name("download"));
+		System.out.println(checkbox.size());
+		for(WebElement w:checkbox) {
+			w.click();
+		}
+		driver.quit();
+	}
+
+}
